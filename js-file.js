@@ -22,7 +22,7 @@ const updateDisplay = () => {
     previousInput === null ? upperDisplay.textContent = '': upperDisplay.textContent = previousInput
 }
 
-function operate (number1, number2, operation) {
+const operate = (number1, number2, operation) => {
     if (operation === 'plus') {
         return add(number1, number2)
     } else if (operation === 'minus') {
