@@ -17,14 +17,14 @@
             <div class="calculator">
                 <div class="row">
                     <div class="display">
-                        <div class="upperDisplay">12345</div>
-                        <div class="lowerDisplay">567889</div>
+                        <div class="upperDisplay"></div>
+                        <div class="lowerDisplay"></div>
                     </div>
                 </div>
                 <div class="row">
-                    <button value="all-clear" class="all-clear">AC</button>
-                    <button value="clear" class="clear">C</button>
-                    <button value="percent" class="operator">%</button>
+                    <button value="all-clear" class="all-clear" onclick="clearAll();">AC</button>
+                    <button value="clear" class="clear" onclick="clearCurrent();">C</button>
+                    <button value="modulo" class="operator">%</button>
                     <button value="divide" class="operator">÷</button>
                 </div>
                 <div class="row">
@@ -47,7 +47,7 @@
                 </div>
                 <div class="row">
                     <button value="0" class="number">0</button>
-                    <button value="equals" class="operator">=</button>
+                    <button value="equals" class="equals">=</button>
                 </div>
             </div>
         </div>
