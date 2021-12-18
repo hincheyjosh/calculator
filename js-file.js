@@ -1,7 +1,7 @@
 const add = (a, b) => a + b
 const subtract = (a, b) => a - b
 const multiply = (a, b) => a * b
-const divide = (a, b) => b == 0 ? "Nope": a / b
+const divide = (a, b) => b == 0 ? "Nope": (a / b).toFixed(1)
 const modulo = (a, b) => b == 0 ? "Nope": a % b
 
 const clearAll = () => {
@@ -63,15 +63,25 @@ numbers.forEach(number => {
 
 operators.forEach(operator => {
     operator.addEventListener('click', function() {
-        currentOperator = this.value
-        previousInput = currentInput
-        currentInput = null
-        updateDisplay()
+        if (currentOperator === null) {
+            currentOperator = this.value
+            previousInput = currentInput
+            currentInput = null
+            updateDisplay()
+        } else {
+            runningTotal = operate(Number(previousInput), Number(currentInput), currentOperator)
+            previousInput = runningTotal
+            currentInput = null
+            currentOperator = this.value
+            updateDisplay()
+        }
     })
 })
 
 equals.addEventListener('click', function() {
     runningTotal = operate(Number(previousInput), Number(currentInput), currentOperator)
     currentInput = runningTotal
+    currentOperator = null
+    previousInput = null
     updateDisplay()
 })
