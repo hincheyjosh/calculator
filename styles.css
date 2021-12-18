@@ -24,6 +24,7 @@ body {
 }
 
 button {
+    margin: 3px;
     min-width: 77px;
     min-height: 77px;
     border-radius: 50px;
@@ -110,11 +111,22 @@ footer {
 }
 
 .operator,
-.equals {
+.equals,
+.negative {
     background-color: #657786;
+    color: white;
 }
 
 .clear,
 .all-clear {
     background-color: 	#1da1f2;
+    color: white;
+}
+
+.hidden {
+    background-color: #aab8c2;
+    border: none;
+    box-shadow: none;
+    height: 20px;
+    cursor: auto;
 }

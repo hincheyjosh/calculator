@@ -43,6 +43,7 @@ let runningTotal = null
 
 const numbers = document.querySelectorAll(".number")
 const operators = document.querySelectorAll('.operator')
+const negative = document.getElementById("negative")
 const lowerDisplay = document.querySelector(".lowerDisplay")
 const upperDisplay = document.querySelector(".upperDisplay")
 const equals = document.querySelector(".equals")
@@ -83,5 +84,10 @@ equals.addEventListener('click', function() {
     currentInput = runningTotal
     currentOperator = null
     previousInput = null
+    updateDisplay()
+})
+
+negative.addEventListener('click', function () {
+    currentInput = Number(currentInput) * -1
     updateDisplay()
 })
